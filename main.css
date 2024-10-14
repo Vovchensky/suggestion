@@ -576,6 +576,9 @@ footer.visible {
         width: 290px;
         height: auto;
     }
+    .zov__loading {
+        font-size 18px:
+    }
 }
 @media (max-width: 485px) {
     .modal__search-menu__list {
@@ -585,7 +588,7 @@ footer.visible {
     font-size: 28px;
     }
     .suggestion__title:hover {
-        font-size: 29px;
+        font-size: 28px;
     }
         .footer__content p {
             font-size: 26px;
