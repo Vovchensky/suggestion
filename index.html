@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="favicon" rel="icon" href="https://seeklogo.com/images/Z/z-letter-of-the-russian-ribbon-of-saint-george-logo-95936DE7C5-seeklogo.com.png">
+    <link rel="stylesheet" href="main.css">
+    <title>Предложка</title>
+    <meta name="description" content="#ZaНаших">
+</head>
+<body>
+    <audio id="uiClick" src="https://zvukipro.com/uploads/files/2019-09/1568275829_6a6ad928cfac061.mp3"></audio>
+    <audio id="uiError" src="audio/error.mp3"></audio>
+    <dialog class="video-modal" id="videoModal">
+        <div class="zov__wrapper">
+            <p class="zov__loading" id="zovLoading">Загружаем видео в лучшем качестве!</p>
+            <span class="close" onclick="closeVideoModal()" style="top: -5px; right: 5px; font-size: 28px;">&times;</span>
+            <iframe id="videoIframe" width="1120" height="630" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </dialog>
+    <dialog class="modal__call-menu" id="callMenu">
+        <div class="modal__call-menu__content">
+           <div class="modal__call-menu__header">
+            <h2>Транспорт для поставок</h2>
+            <span class="close" onclick="closeModal('callMenu')">&times;</span>
+           </div>
+           <div class="modal__call-menu__car-list">
+                <div class="modal__call-menu-car  menu-car__unlocked" onclick="uiClick.play()">
+                    <img class="modal__call-menu-img" src="https://raritek.uz/storage/products/May2020/vzW0sRtJDr8WGpMApRql.png" alt="транспорт">
+                    <h2 class="modal__call-menu-name">KAMAZ</h2>
+                </div>
+                <div class="modal__call-menu-car menu-car__blocked" onclick="uiError.play()">
+                    <div class="modal__call-menu-img__wrapper">
+                        <svg class="modal__call-menu-lock" xmlns="http://www.w3.org/2000/svg" width="100" height="150" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="12" rx="2" ry="2"></rect><path d="M8 10V6a4 4 0 0 1 8 0v4"></path><line x1="12" y1="15" x2="12" y2="15"></line></svg>
+                    <img class="modal__call-menu-img" src="https://i.ibb.co/qyKPcL6/0000-1.png" alt="транспорт">
+                    </div>
+                    <h2 class="modal__call-menu-name">M1083 MTV</h2>
+                </div>
+                <div class="modal__call-menu-car menu-car__blocked" onclick="uiError.play()">
+                    <div class="modal__call-menu-img__wrapper">
+                        <svg class="modal__call-menu-lock" xmlns="http://www.w3.org/2000/svg" width="100" height="150" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="12" rx="2" ry="2"></rect><path d="M8 10V6a4 4 0 0 1 8 0v4"></path><line x1="12" y1="15" x2="12" y2="15"></line></svg>
+                    <img class="modal__call-menu-img" src="https://ural-specmash.ru/upload/iblock/9c8/9c89d5fa06575ed3b857717fc0e2d1c3.png" alt="транспорт">
+                    </div>
+                    <h2 class="modal__call-menu-name">Ural-4320</h2>
+                </div>
+           </div>
+        </div>
+        </dialog>
+        <dialog class="modal__search-menu" id="searchMenu">
+            <div class="modal__search-menu__content">
+                <div class="modal__search-menu__header" style="background-color: #00000080; backdrop-filter: blur(10px)">
+                 <h2 style="color: rgba(255, 255, 255, 0.95); font-size: 18px;">Предметы игрока</h2>
+                 <span class="close" onclick="closeModal('searchMenu')" style="color: #ffffff50" onmouseover="this.style.color='#ffffff';" onmouseout="this.style.color='#ffffff50';">&times;</span>
+                </div>
+                <div class="modal__search-menu__list">
+                    <div class="modal__search-menu__item" onclick="uiClick.play()">
+                    <div class="modal__serach-menu-img__wrapper">
+                    <img src="https://ik.imagekit.io/ztc9bh2wdx//images/2.4754_product_image_perspective_additional.png?tr=n-ux_tn_w750_v00" alt="предмет">
+                    </div>
+                    <h2 style="color: rgba(255, 255, 255, 0.95); font-size: 15px; user-select: none;">HK-416</h2> 
+                    </div>
+                    <div class="modal__search-menu__item" onclick="uiClick.play()">
+                    <div class="modal__serach-menu-img__wrapper">
+                    <img src="https://i.ibb.co/4ZtMH2f/y-O-wo-GFbz-c-Gkr-Lmuv7b-transformed.png" alt="предмет">
+                    </div>
+                    <h2 style="color: rgba(255, 255, 255, 0.95); font-size: 15px; user-select: none;">5 Уровень доступа</h2> 
+                    </div>
+                    <div class="modal__search-menu__item" onclick="uiClick.play()">
+                    <div class="modal__serach-menu-img__wrapper">
+                    <img src="https://i.namu.wiki/i/L7WGxb98bs8uZZ9oXtuhfCAdLnPT3jdSk7PyWmO1QL7F5UxHJ1ojm8N2YCu633WkJbMJcrQD7cQY86ihA_Pnpw.webp" alt="предмет">
+                    </div>
+                    <h2 style="color: rgba(255, 255, 255, 0.95); font-size: 15px; user-select: none;">M249</h2> 
+                    </div>
+                    <div class="modal__search-menu__item" onclick="uiClick.play()">
+                    <div class="modal__serach-menu-img__wrapper">
+                    <img src="https://i.ibb.co/RSbtqYK/police-taser-gun-stun-q1y-Kl8-A-600-removebg-preview.png" alt="предмет">
+                    </div>
+                    <h2 style="color: rgba(255, 255, 255, 0.95); font-size: 15px; user-select: none;">Тайзер</h2> 
+                    </div>
+                    <div class="modal__search-menu__item" onclick="uiClick.play()">
+                    <div class="modal__serach-menu-img__wrapper">
+                    <img src="https://images.squarespace-cdn.com/content/v1/61f1ba3866abe863e4251ca3/1646277265515-4XGVO7S9JCGL46KTXTNN/s818529497849055264_p31_i1_w640.png" alt="предмет">
+                    </div>
+                    <h2 style="color: rgba(255, 255, 255, 0.95); font-size: 15px; user-select: none;">Glock 17</h2> 
+                    </div>
+                </div>
+        </dialog>
+        <dialog class="modal__management-menu" id="managementMenu" style="border-radius: 5px;">
+            <div class="modal__management-menu__content">
+                <div class="modal__management-menu__header">
+                 <h2 style="color: rgba(255, 255, 255, 0.95); font-size: 18px;">Управление персоналом</h2>
+                 <span class="close" onclick="closeModal('managementMenu')" style="color: #ffffff50" onmouseover="this.style.color='#ffffff';" onmouseout="this.style.color='#ffffff50';">&times;</span>
+                </div>
+                <div class="modal__management-menu__list" style="background-color: #181818;">
+                    <div class="modal__management-menu__employee">
+                        <div class="modal__management-menu__img-wrapper">
+                           <img src="https://avatars.akamai.steamstatic.com/dafa63018f8b21d5df590a38fb0afbc470f0075e_full.jpg" alt="аватар" class="modal__management-menu__img">
+                        </div>
+                        <div class="modal__management-menu__info">
+                           <h2>Sonya Skylinez</h2>
+                           <p>Это вы!</p>
+                        </div>
+                        <div class="modal__management-menu__actions">
+                        <button class="modal__management-menu__button" onclick="uiError.play()">ПОВЫСИТЬ</button>
+                        <button class="modal__management-menu__button" onclick="uiError.play()">ПОНИЗИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="modal__management-menu__employee">
+                        <div class="modal__management-menu__img-wrapper">
+                           <img src="https://avatars.akamai.steamstatic.com/4c604ae141ee78ccaf57e33d8b1c8e3cebeca2ee_full.jpg" alt="аватар" class="modal__management-menu__img">
+                        </div>
+                        <div class="modal__management-menu__info">
+                           <h2>Саша Жид</h2>
+                           <p>Полковник безопасности</p>
+                        </div>
+                        <div class="modal__management-menu__actions">
+                        <button class="modal__management-menu__button" onclick="uiClick.play()">ПОВЫСИТЬ</button>
+                        <button class="modal__management-menu__button" onclick="uiClick.play()">ПОНИЗИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="modal__management-menu__employee">
+                        <div class="modal__management-menu__img-wrapper">
+                           <img src="https://avatars.akamai.steamstatic.com/0f46c0b01872dd84978340b3d9bd7ce405246a17_full.jpg" alt="аватар" class="modal__management-menu__img">
+                        </div>
+                        <div class="modal__management-menu__info">
+                           <h2>Artem Skyline</h2>
+                           <p>Майор безопасности</p>
+                        </div>
+                        <div class="modal__management-menu__actions">
+                        <button class="modal__management-menu__button" onclick="uiClick.play()">ПОВЫСИТЬ</button>
+                        <button class="modal__management-menu__button" onclick="uiClick.play()">ПОНИЗИТЬ</button>
+                        </div>
+                    </div>
+                </div>
+        </dialog>
+        <div class="burger-menu">
+            <a href="" class="burger-menu_button">
+              <spun class="burger-menu_lines"></spun>
+            </a>
+            <div class="burger-menu_nav">
+                <a class="burger-menu_link" onclick="scrollToSection('supplies')">Поставки</a>
+                <a class="burger-menu_link" onclick="scrollToSection('defibrillator')">Дефибриллятор</a>
+                <a class="burger-menu_link" onclick="scrollToSection('handcuffs')">Наручники</a>
+                <a class="burger-menu_link" onclick="scrollToSection('interactionMenu')">Меню взаимодействий</a>
+                <a class="burger-menu_link" onclick="scrollToSection('dsa')">ДСА</a>
+                <a class="burger-menu_link" onclick="scrollToSection('money')">Деньги</a>
+                <a class="burger-menu_link" onclick="scrollToSection('ranks')">Должности СБ</a>
+                <a class="burger-menu_link" onclick="scrollToSection('spies')">Шпионы</a>
+                <a class="burger-menu_link" onclick="scrollToSection('health')">Здоровье</a>
+                <a class="burger-menu_link" onclick="scrollToSection('scientists')">Учёные</a>
+                <a class="burger-menu_link" onclick="scrollToSection('anims')">Анимации</a>
+                <a class="burger-menu_link" onclick="scrollToSection('trash')">Trash</a>
+            </div>
+            <div class="burger-menu_overlay"></div>
+          </div>
+        <div class="sidenav">
+            <a onclick="scrollToSection('supplies')">Поставки</a>
+            <a onclick="scrollToSection('defibrillator')">Дефибриллятор</a>
+            <a onclick="scrollToSection('handcuffs')">Наручники</a>
+            <a onclick="scrollToSection('interactionMenu')">Меню взаимодействий</a>
+            <a onclick="scrollToSection('dsa')">ДСА</a>
+            <a onclick="scrollToSection('money')">Деньги</a>
+            <a onclick="scrollToSection('ranks')">Должности СБ</a>
+            <a onclick="scrollToSection('spies')">Шпионы</a>
+            <a onclick="scrollToSection('health')">Здоровье</a>
+            <a onclick="scrollToSection('scientists')">Учёные</a>
+            <a onclick="scrollToSection('anims')">Анимации</a>
+            <a onclick="scrollToSection('trash')">Trash</a>
+          </div>
+          <div class="main__wrapper"></div>
+    <main>
+    <section class="section section__supplies" id="supplies">
+    <h1 class="suggestion__title" onclick="openVideoModal('z1')">Поставки</h1>
+    <div class="suggestion__desc__wrapper">
+    <p class="suggestion__desc">На Релаксе уже предпринимались попытки реализовать систему поставок, но игрокам не было интересно просто выходить на улицу и носить коробки для НПС — это скучно. У меня есть идея, как можно сделать это иначе.</p>
+    <p class="suggestion__desc">Руководитель Комплекса, а в его отсутствие — ГСБ, может вызвать грузовик у НПС в гараже на поверхности комплекса через <a class="interaction" onclick="openModal('callMenu')">меню</a>. Часть сотрудников садится в грузовик, за руль садится глава или тот, кому он доверяет, и они отправляются в определенную точку на карте. По прибытии им необходимо загрузить n количество ящиков в грузовик и вернуться обратно в комплекс. Когда грузовик заезжает на точку сдачи, аммуниция комплекса пополняется.</p>
+    <p class="suggestion__desc">Интерес заключается в том, что другие организации (Длань Змея, Повстанцы Хаоса) могут попытаться перекрыть эту поставку. Например, шпион сообщает своей организации по рации о готовящейся поставке, и вражеская организация собирается в определенном месте для перекрытия поставки. Их выгода заключается в том, что если они победят кмовцев, то смогут загрузить ящики с аммуницией в свой грузовик и уехать, тем самым пополняя свои запасы.</p>
+    <p class="suggestion__desc">Мне кажется, что было бы интересно участвовать в перестрелках во время этих поставок — своего рода ивент.</p>
+     </div>
+    </section>
+    <section class="section section__defibrillator" id="defibrillator">
+    <h1 class="suggestion__title" onclick="openVideoModal('z2')">Дефибриллятор</h1>
+    <div class="suggestion__desc__wrapper">
+    <p class="suggestion__desc">Дефибриллятор выдается исключительно медицинскому персоналу. Когда игрок нажимает кнопку "E", держа дефибриллятор в руках, система проверяет состояние здоровья игрока, находящегося напротив. Если игрок мертв, дефибриллятор активируется. При активации мертвый игрок возрождается и восстанавливает 100 hp. После использования дефибриллятора он уходит на перезарядку на 60 секунд.</p>
+    </div>
+    </section>
+    <section class="section section__handcuffs" id="handcuffs">
+    <h1 class="suggestion__title" onclick="openVideoModal('z3')">Наручники</h1>
+    <div class="suggestion__desc__wrapper">
+    <p class="suggestion__desc">Эти наручники уже устарели: постоянные растягивания и застревания. Поэтому, предлагаю добавить новые наручники, которые будут иметь функцию залома и функциональный запрет взаимодействия с дверями.</p>
+    </div>
+    </section>
+    <section class="section section__interaction-menu" id="interactionMenu">
+    <h1 class="suggestion__title" onclick="openVideoModal('z4')">Меню взаимодействий</h1>
+    <div class="suggestion__desc__wrapper">
+    <p class="suggestion__desc">Будет очень неплохо добавить новую функцию в меню взаимодействий, которое появляется при зажатии клавиши "E" по игроку. Функции обыска давно не хватает на проекте, и я не вижу смысла объяснять, почему она необходима. Важно, чтобы обыск был удобным: например, чтобы появлялось <a class="interaction" onclick="openModal('searchMenu')">окно</a> со всеми найденными предметами, и при нажатии на предмет он изымался. Также прошу сделать так, чтобы это окно не открывалось при нажатии комбинации Alt + E (удар прикладом), так как это сильно мешает.</p>
+    </div>
+    </section>
+    <section class="section section__dsa" id="dsa">
+    <h1 class="suggestion__title" onclick="openVideoModal('z5')">Донатный СуперАдминистратор</h1>
+    <div class="suggestion__desc__wrapper">
+    <p class="suggestion__desc">Люди платят 2000₽, при этом они должны исполнять обязанности наборной администрации и не получают никаких плюшек. Выдайте доступ к списку оружия и уберите у них обязанность работать. Возможно, стоит добавить им какие-то особые обвесы для оружия.</p>
+    </div>
+    </section>
+    <section class="section section__money" id="money">
+    <h1 class="suggestion__title" onclick="openVideoModal('z6')">Деньги</h1>
+    <div class="suggestion__desc__wrapper">
+    <p class="suggestion__desc">Сделать покупку скинов на оружия, экранов смерти, тегов в чате, разблокировку транспорта, или найти другое применение для денег.</p>
+    </div>
+    </section>
+    <section class="section section__ranks" id="ranks">
+    <h1 class="suggestion__title" onclick="openVideoModal('z7')">Должности СБ</h1>
+    <div class="suggestion__desc__wrapper">
+    <p class="suggestion__desc" style="user-select: all;">Уже предлагали добавить возможность ГСБ повышать своих сотрудников. Спорная идея, но если это всё же будет, то предлагаю вот такое <a class="interaction" onclick="openModal('managementMenu')">меню</a> и следующие должности:</p>
+    </div>
+    <div>
+    <div class="ranks__list" style="user-select: auto">
+        <div class="rank">
+            <h2>Рядовой сотрудник</h2>
+            <p>Патрулирование, контроль доступа, выолнение указаний старших офицеров.</p>
+        </div>
+        <div class="rank">
+            <h2>Офицер безопасности</h2>
+            <p>Управление патрулями, участие в расследованиях, обеспечение безопасности объектов.</p>
+        </div>
+        <div class="rank">
+            <h2>Старший офицер безопасности</h2>
+            <p>Координация действий группы, обучение новых сотрудников, разработка планов реагирования на инциденты.</p>
+        </div>
+        <div class="rank">
+            <h2>Лейтенант безопасности</h2>
+            <p>Управление сменами, взаимодействие с другими службами, анализ инцидентов и составление отчетов.</p>
+        </div>
+        <div class="rank">
+            <h2>Капитан безопасности</h2>
+            <p>Стратегическое планирование безопасности, руководство крупными операциями, взаимодействие с руководством.</p>
+        </div>
+        <div class="rank">
+            <h2>Майор безопасности</h2>
+            <p>Управление несколькими подразделениями, разработка и внедрение новых протоколов безопасности.</p>
+        </div>
+        <div class="rank">
+            <h2>Полковник безопасности</h2>
+            <p>Руководство всей службой безопасности, принятие ключевых решений.</p>
+        </div>
+        <div class="rank">
+            <h2>Глава Службы Безопасности</h2>
+            <p>Высшее звание, отвечающее за свой отдел, стратегическое планирование.</p>
+        </div>
+    </div>
+</div>
+    </section>
+    <section class="section section__spies" style="margin-bottom: 150px;" id="spies">
+        <h1 class="suggestion__title" onclick="openVideoModal('z8')">Шпионы</h1>
+        <div class="suggestion__desc__wrapper">
+        <p class="suggestion__desc">Добавить шпионам функциональные задания с периодичностью, например, устранение определённого сотрудника или похищение важных документов.</p>
+        </div>
+        </section>
+        <section class="section section__health" style="margin-bottom: 150px;" id="health">
+        <h1 class="suggestion__title" onclick="openVideoModal('z9')">Здоровье</h1>
+        <div class="suggestion__desc__wrapper">
+        <p class="suggestion__desc">Создайте несколько типов ранений, таких как огнестрельные, колющие, взрывные и токсичные. Каждый из них должен по-разному влиять и вызывать уникальные эффекты. Например, серьезные повреждения могут приводить к замедлению и размытию экрана, а длительное воздействие токсинов будет постепенно ухудшать состояние. Сделайте медиков полезными, добавьте им возможности первой помощи и медикаменты для лечения. И ещё, не забудьте про баланс, чтобы SCP не ебали весь комплекс.</p>
+        </div>
+        </section>
+        <section class="section section__scientists" style="margin-bottom: 150px;" id="scientists">
+        <h1 class="suggestion__title" onclick="openVideoModal('z10')">Учёные</h1>
+        <div class="suggestion__desc__wrapper">
+        <p class="suggestion__desc">Создайте новую систему для отдела ученых. Теперь ученые будут разделены на должности, с которыми можно ознакомиться ниже. Должность зависит от уровня прокачки (не путать с уровнем игрока!). Всего предусмотрено 5 уровней.</p>
+        <p class="suggestion__desc">Для повышения уровня необходимо выполнять задания, которые будут меняться на каждом уровне: на первом уровне задания будут проще, а на следующих — сложнее. Например, чтобы повысить уровень с 1 до 2, нужно изучить 15 объектов и приобрести любые 2 улучшения для комплекса.</p>
+        <p class="suggestion__desc">Улучшения для комплекса: чем выше уровень ученого, тем более качественные улучшения он сможет приобрести. Все улучшения действуют в течение 1 часа реального времени и требуют затрат (игровых денег). Я также придумал несколько улучшений, с которыми можно ознакомиться ниже.</p>
+        </div>
+        <h2 style="margin-top: 30px; text-align: center;">Должности:</h2>
+        <div class="ranks__list" style="user-select: auto">
+            <div class="rank">
+                <h2>Младший учёный</h2>
+                <p>Ведёт базовые исследования аномалий. Имеет 3 уровень доступа.</p>
+            </div>
+            <div class="rank">
+                <h2>Учёный 1-й категории</h2>
+                <p>Проводит стандартизированные эксперименты. Имеет 3 уровень доступа.</p>
+            </div>
+            <div class="rank">
+                <h2>Старший учёный</h2>
+                <p>Руководит проектами и анализирует данные. Имеет 4 уровень доступа.</p>
+            </div>
+            <div class="rank">
+                <h2>Учёный-аналитик</h2>
+                <p>Изучает аномалии в действии и собирает данные. Имеет 4 уровень доступа.</p>
+            </div>
+            <div class="rank">
+                <h2>Учёный-Куратор</h2>
+                <p>Курирует учёных. Имеет 4 уровень доступа.</p>
+            </div>
+            </div>
+            <h2 style="margin-top: 30px; text-align: center;">Улучшения:</h2>
+            <div class="ranks__list" style="user-select: auto">
+                <div class="rank">
+                    <h2>Видеонаблюдение</h2>
+                    <p>Оповещает охрану о сбежавших SCP.</p>
+                </div>
+                <div class="rank">
+                    <h2>Роскомнадзор</h2>
+                    <p>SCP не могут открывать двери комплекса.</p>
+                </div>
+                <div class="rank">
+                    <h2>Новое вооружение</h2>
+                    <p>Сотрудники получают новое оружие.</p>
+                </div>
+                <div class="rank">
+                    <h2>Новые технологии</h2>
+                    <p>Двери комплекса нельзя взломать взломщиком.</p>
+                </div>
+                <div class="rank">
+                    <h2>Мобильные укрытия</h2>
+                    <p>В комплексе появляются укрытия и баррикады.</p>
+                </div>
+                <div class="rank">
+                    <h2>Восстановление</h2>
+                    <p>Раздатчики брони и хп восстанавливают в 2 раза больше.</p>
+                </div>
+                <div class="rank">
+                    <h2>Щиты</h2>
+                    <p>Вооружённые сотрудники получают щиты.</p>
+                </div>
+                <div class="rank">
+                    <h2>Световые эффекты</h2>
+                    <p>В комплексе появляются световые источники, ослепляющие SCP.</p>
+                </div>
+                <div class="rank">
+                    <h2>Электрические барьеры</h2>
+                    <p>В комплексе появляются барьеры которые оглушают и замедляют SCP при контакте на определенное время.</p>
+                </div>
+                <div class="rank">
+                    <h2>Тайники</h2>
+                    <p>В комплексе, в случайных местах появляются тайники с новым оружием.</p>
+                </div>
+                <div class="rank">
+                    <h2>Артефакты</h2>
+                    <p>В комплексе, в случайных местах появляются артефакты дающие бонусы сотрудникам.</p>
+                </div>
+                <div class="rank">
+                    <h2>Улучшение оружия</h2>
+                    <p>Открывает новые обвесы на оружии.</p>
+                </div>
+                </div>
+        </section>
+        <section class="section section__anims" style="margin-bottom: 150px;" id="anims">
+            <h1 class="suggestion__title" onclick="openVideoModal('z11')">Анимации</h1>
+            <div class="suggestion__desc__wrapper">
+            <p class="suggestion__desc">Добавьте новые анимации. Например, в мастерской стима уже есть популярный аддон с танцами из фортнайта.</p>
+            </div>
+            </section>
+            <section class="section section__trash" style="margin-bottom: 150px;" id="trash">
+                <h1 class="suggestion__title" onclick="openVideoModal('z12')">trash</h1>
+                <div class="suggestion__desc__wrapper">
+                <p class="suggestion__desc">Перед тем как публиковать обновления, пожалуйста, проверяйте новые системы/карту на баги. От количества багов после ваших обновлений ахуевает каждый. У вас есть наборный состав, закройте сервер на тех работы, позовите их и пускай тестируют обновление. И верните уже систему увольнений, люди +- месяц играют без неё. Также, было бы неплохо, если вы проявляли больше активности в дискорде, например скидывали видео о том, что будет в обновлении и т.д</p>
+                </div>
+                </section>
+                <footer>
+                    <div class="footer__content">
+                        <p>Спасибо за прочтение!</p>
+                        <div class="footer__img__wrapper">
+                        <img src="img/love.png" alt="#ZaНаших">
+                        </div>
+                    </div>
+                </div>
+                </footer>
+        </main>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
