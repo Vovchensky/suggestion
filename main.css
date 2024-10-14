@@ -558,6 +558,14 @@ footer.visible {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+@media (max-width: 765px) {
+    .modal__management-menu__header {
+        width: 720px;
+    }
+    .modal__management-menu__list {
+        width: 720px;
+    }
+}
 @media (min-width: 871px) {
     .burger-menu {
         display: none;
