@@ -560,10 +560,13 @@ footer.visible {
 }
 @media (max-width: 765px) {
     .modal__management-menu__header {
-        width: 720px;
+        width: 570px;
     }
     .modal__management-menu__list {
-        width: 720px;
+        width: 570px;
+    }
+    .modal__management-menu__employee {
+        width: 550px;
     }
 }
 @media (min-width: 871px) {
